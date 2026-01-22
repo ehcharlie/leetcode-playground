@@ -1,11 +1,11 @@
 package org.example;
 
-import org.example.algorithms.sort.SelectionSort;
-
+import org.example.leetcode.LengthOfLongestSubstring;
 
 public class Main {
-    public static void main(String[] args) {
-        SelectionSort.example();
+
+    static void main(String[] args) {
+        System.out.println(LengthOfLongestSubstring.example(" "));
     }
 
 }

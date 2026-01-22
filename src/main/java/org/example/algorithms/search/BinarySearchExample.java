@@ -56,6 +56,33 @@ public class BinarySearchExample {
         return -1;
     }
 
+    public int binarySearchExampleTwo(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] == target) return mid;
+
+            if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return -1;
+    }
+
+
+    public int binarySearchRecursive(int[] arr, int start, int end, int target) {
+        if (start > end) return -1; // Base case
+        int mid = start + (end - start) / 2; // Find the midpoint
+        if (arr[mid] == target) return mid; // Target found
+        if (arr[mid] > target) // If the target is less than the midpoint
+            return binarySearchRecursive(arr, start, mid - 1, target); // Search the left half
+        return binarySearchRecursive(arr, mid + 1, end, target); // Search the right half
+    }
 
     /**
      * Example using the built in "Array" Binary search
