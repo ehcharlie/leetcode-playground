@@ -12,7 +12,7 @@ package org.example.algorithms.sort;
 public class BubbleSort {
 
     public static void example() {
-        int[] array = new int[]{9, 8, 4, 7, 8, 6, 5, 4, 3, 2, 1, 9, 8, 7, 3, 4, 5, 67, 11};
+        int[] array = new int[]{9, 8, 4, 7, 8, 6, 5, 4, 3, 2, 1, 8, 7, 3, 4, 5, 67, 11};
 
         bubbleSort(array);
 
