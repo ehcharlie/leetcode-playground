@@ -21,16 +21,15 @@ public class InsertionSort {
     public static void insertionSort(int[] array) {
 
         for (int i = 1; i < array.length; i++) {
-            int currentValue = array[i];
+            int currentValue = array[i]; //Current value is index n+1
+            int previousValue = i - 1; //Index before I - always assumed to eb 'sorted' ish
 
-            int j = i - 1;
-
-            while (j >= 0 && array[j] > currentValue) {
-                array[j+1] = array[j];
-                j--;
+            while (previousValue >= 0 && array[previousValue] > currentValue) {
+                array[previousValue + 1] = array[previousValue];
+                previousValue--;
             }
+            array[previousValue + 1] = currentValue;
 
-            array[j+1] = currentValue;
         }
     }
 }
