@@ -1,7 +1,6 @@
 package org.example.datastructures;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 /*
@@ -60,6 +59,7 @@ public class LinkedListExample {
         linkedList.offer("F");
 //        linkedList.poll();
 
+        Collections.reverseOrder();
         linkedList.add(4, "E");
 
         linkedList.addFirst("0");
